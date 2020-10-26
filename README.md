@@ -11,9 +11,14 @@ kun je [hier](https://restcountries.eu/#api-endpoints-language) vinden.
 
 ## Voor je begint
 1. Koppel jouw javaScript bestand met de HTML pagina. Doe dit ook voor het CSS bestand.
-2. Vergeet niet dat je bij iedere wijziging eerst moet opslaan en de browser moet refreshen. 
+2. Maak een `package.json` aan met `npm init --yes`
+3. Installeer de npm package `axios` met `npm install axios --save`. Als de de [documentatie](https://www.npmjs.com/package/axios) 
+bekijkt en op `async` zoekt, vindt je een code-voorbeeld.
+4. Zorg ervoor dat we toegang hebben tot deze package door `<script src="./node_modules/axios/dist/axios.min.js"></script>`
+aan onze HTML toe te voegen.
+4. Vergeet niet dat je bij iedere wijziging eerst moet opslaan en de browser moet refreshen. 
 `Nodemon` is niet meer nodig omdat we JavaScript nu in de browser gaan gebruiken (waar het voor bedoeld is)
-3. Schrijf voor alle onderstaande opdrachten eerst **stap voor stap de psuedo-code uit**. 
+5. Schrijf voor alle onderstaande opdrachten eerst **stap voor stap de psuedo-code uit**. 
 Check bij de pseudo-antwoorden of je geen stappen overgeslagen hebt. Begin dan pas met programmeren.
 
 ## Plan de campagne
