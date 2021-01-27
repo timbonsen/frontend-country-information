@@ -84,39 +84,32 @@ async function getCountryData() {
 }
 
 function createLanguageDescription(languages) {
-  return languages.reduce((acc, currentLanguage, index, array) => {
-    // als de array maar één entry heeft of als we bij de eerste entry zijn (geen kommma)
-    if (array.length === 1 || index === 0) {
-      return `${acc} ${currentLanguage.name}`;
-    }
-    // als we bij de laatste entry van de array zijn (voeg 'en ' toe)
-    if (index === array.length - 1) {
-      return `${acc} and ${currentLanguage.name}`;
-    }
+  let output = 'They speak ';
 
-    // Alles wat tussen de eerste en de laatste entry ligt, voeg wel een komma toe:
-    if (index !== array.length - 1 && index !== 0) {
-      return `${acc}, ${currentLanguage.name}`;
+  for (let i = 0; i < languages.length; i++) {
+    // als dit de laatste entry is, voeg dan " and " toe
+    if (i === languages.length - 1) {
+      // de return zorgt ervoor dat er niet meer naar de andere if-statements gekeken wordt
+      return output = output + " and " + languages[i];
     }
+    // als de array sowieso maar twee talen bevat of we zijn bij de één-na-laatste naam, voeg dan alleen de taal toe
+    if (languages.length === 2 || i === languages.length - 2) {
+      output = output + languages[i];
+    } else {
+      // in andere alle gevallen voegen we een komma en spatie toe
+      output = output + languages[i] + ", ";
+    }
+  }
 
-  }, 'They speak ');
+  return output;
 }
 
 function createCurrencyDescription(currencies) {
-  return currencies.reduce((acc, currentCurrency, index, array) => {
-    // als de array maar één entry heeft of als we bij de eerste entry zijn (geen kommma)
-    if (array.length === 1 || index === 0) {
-      return `${acc} ${currentCurrency.name}'s`;
-    }
-    // als we bij de laatste entry van de array zijn (voeg 'en ' toe)
-    if (index === array.length - 1) {
-      return `${acc} and ${currentCurrency.name}'s`;
-    }
+  let output = 'and you can pay with ';
 
-    // Alles wat tussen de eerste en de laatste entry ligt, voeg wel een komma toe:
-    if (index !== array.length - 1 && index !== 0) {
-      return `${acc}, ${currentCurrency.name}'s`;
-    }
+  if (currencies.length === 2) {
+    return output + `${currencies[0]} and ${currencies[1]}'s`;
+  }
 
-  }, 'and you can pay with');
+  return output + `${currencies[0]}'s`;
 }
