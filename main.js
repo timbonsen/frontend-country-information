@@ -1,15 +1,27 @@
 
-const countryToSearch = 'Netherlands'
+/*const countryToSearch = 'Netherlands'*/
+
+
+const searchBar = document.getElementById("searchBar");
+searchBar.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        fetchCountryInfo(searchBar.value);
+        searchBar.value = '';
+    }
+});
 
 const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener('click', () => {fetchCountryInfo(countryToSearch)} );
+searchButton.addEventListener('click', () => {
+    fetchCountryInfo(searchBar.value);
+    searchBar.value = '';
+});
 
 const countryContainer = document.getElementById("countryContainer")
 
-async function fetchCountryInfo() {
+async function fetchCountryInfo(input) {
 
     try {
-        const result = await axios.get(`https://restcountries.eu/rest/v2/name/${countryToSearch}?fullText=true`);
+        const result = await axios.get(`https://restcountries.eu/rest/v2/name/${input}?fullText=true`);
         const countryInfo = result.data[0]
         console.log(countryInfo)
         displayFlag(countryInfo)
