@@ -6,11 +6,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<input id="searchBar" type="text">
-<button id="searchButton">Search</button>
-
-<div id="countryContainer"></div>
-
+<div id="inputContainer">
+    <input id="searchBar" type="text">
+    <button id="searchButton">Search</button>
+</div>
+<div id="centerInfo">
+    <div id="countryContainer">
+        <div id="countryHeader">
+            <img id="flagImage" class="countryHeader" src="" alt="">
+            <h1 id="countryName" class="countryHeader"></h1>
+        </div>
+        <p id="locationPopulation"></p>
+        <p id="capitalCurrency"></p>
+        <p id="languages"></p>
+    </div>
+</div>
 </body>
 <script src="./node_modules/axios/dist/axios.min.js"></script>
 <script src="main.js"></script>

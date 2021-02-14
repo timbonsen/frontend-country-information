@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Permanent+Marker&display=swap');
+
+#countryContainer {
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 600px;
+}
+
+#inputContainer {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#centerInfo {
+    display: flex;
+    justify-content: center;
+}
+
+#flagImage {
+    max-height: 50px;
+    margin-right: 50px;
+}
+
+#countryHeader {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+p {
+    font-family: 'Asap', sans-serif;
+}
