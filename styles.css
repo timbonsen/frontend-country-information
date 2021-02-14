@@ -5,12 +5,12 @@ body {
 }
 
 #countryContainer {
-    border: 3px solid;
-    border-color: rgb(62,34,11);
+    border: 1px solid;
+    border-color: rgb(10,0,0);
     border-radius: 10px;
     padding: 10px;
     width: 600px;
-    background-color: rgba(62,34,11,0.7);
+    background-color: rgba(0,0,0,0.7);
 }
 
 #inputContainer {
@@ -37,6 +37,12 @@ body {
 
 h1 {
     font-family: 'Permanent Marker', cursive;
+    color: rgb(0, 0, 0);
+    font-size: xxx-large;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
     color: antiquewhite;
 }
 
@@ -47,20 +53,31 @@ p {
 
 #searchButton {
     color: antiquewhite;
-    background-color: rgba(62,34,11,0.7);
+    background-color: rgba(0,0,0,0.7);
     text-transform: uppercase;
     font-family: 'Asap', sans-serif;
-    border: 2px solid rgb(62, 34, 11);
+    border: 1px solid rgb(10,0,0);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    padding: 10px;
 }
 
 #searchBar {
     color: antiquewhite;
     font-family: 'Asap', sans-serif;
-    background-color: rgba(62,34,11,0.7);
-    border: 2px solid rgb(62, 34, 11);
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid rgb(10,0,0);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-right-style: none;
+}
+
+#headerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#errorContainer {
+    display: flex;
+    justify-content: center;
 }

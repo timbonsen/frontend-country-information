@@ -16,7 +16,7 @@ searchButton.addEventListener('click', () => {
     searchBar.value = '';
 });
 
-const countryContainer = document.getElementById("countryContainer")
+/*const countryContainer = document.getElementById("countryContainer")*/
 
 async function fetchCountryInfo(input) {
 
@@ -28,10 +28,29 @@ async function fetchCountryInfo(input) {
         displayCountryInfo(countryInfo)
     } catch(e) {
         console.error(e);
+        invalidCountry();
     }
 }
 
+function invalidCountry() {
+    const errorMessage = document.getElementById('errorMessage')
+    errorMessage.textContent = 'This is not a valid country in this database, try something else?';
+    const imageElement = document.getElementById("flagImage");
+    imageElement.src = '';
+    imageElement.alt = '';
+    const countryName = document.getElementById('countryName')
+    countryName.textContent = '';
+    const locationPopulation = document.getElementById('locationPopulation');
+    locationPopulation.textContent = '';
+    const capitalCurrencys = document.getElementById('capitalCurrency');
+    capitalCurrencys.textContent = '';
+    const languages = document.getElementById('languages');
+    languages.textContent = '';
+}
+
 function displayCountryInfo(countryInfo) {
+    const errorMessage = document.getElementById('errorMessage')
+    errorMessage.textContent = ''
     const countryName = document.getElementById('countryName')
     countryName.textContent = countryInfo.name;
     /*console.log(countryInfo.name + ' is situated in ' + countryInfo.subregion + '. It has a population of ' + countryInfo.population + ' people.');*/

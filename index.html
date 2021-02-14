@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Country Info Tool</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="headerContainer">
+    <h1 id="headerText">Let's get some country information!</h1>
+</div>
 <div id="inputContainer">
     <input id="searchBar" type="text">
     <button id="searchButton">Search</button>
@@ -14,11 +17,14 @@
     <div id="countryContainer">
         <div id="countryHeader">
             <img id="flagImage" class="countryHeader" src="" alt="">
-            <h1 id="countryName" class="countryHeader"></h1>
+            <h2 id="countryName" class="countryHeader"></h2>
         </div>
         <p id="locationPopulation"></p>
         <p id="capitalCurrency"></p>
         <p id="languages"></p>
+        <div id="errorContainer">
+            <p id="errorMessage"></p>
+        </div>
     </div>
 </div>
 </body>
