@@ -149,3 +149,35 @@ p {
     display: flex;
     justify-content: center;
 }
+
+#europe {
+    color: #FFD435;
+}
+
+#northAmerica {
+    color: #4C824B;
+}
+
+#southAmerica {
+    color: #6AC487;
+}
+
+#asia {
+    color: #D14E5B;
+}
+
+#africa {
+    color: #5575C2;
+}
+
+#oceania {
+    color: #A653BA;
+}
+
+#noRegion {
+    color: antiquewhite;
+}
+
+#europe:hover, #southAmerica:hover, #northAmerica:hover, #asia:hover, #africa:hover, #oceania:hover {
+    color: antiquewhite;
+}
