@@ -12,12 +12,21 @@ body {
     background-color: rgba(0,0,0,0.7);
 }
 
-#popPage {
+#buttonBar {
     display: flex;
     justify-content: center;
 }
 
-#popViewButton {
+#worldMap {
+    width: 100%;
+}
+
+#worldMapContainer {
+    padding: 30px;
+    background: transparent;
+}
+
+#linkButton {
     padding: 10px;
     color: antiquewhite;
     border: 1px solid rgb(10, 0, 0);
