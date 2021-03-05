@@ -5,12 +5,29 @@ body {
 }
 
 #countryContainer {
-    border: 1px solid;
-    border-color: rgb(10,0,0);
+    border: 1px solid rgb(10, 0, 0);
     border-radius: 10px;
     padding: 10px;
     width: 600px;
     background-color: rgba(0,0,0,0.7);
+}
+
+#popPage {
+    display: flex;
+    justify-content: center;
+}
+
+#popViewButton {
+    padding: 10px;
+    color: antiquewhite;
+    border: 1px solid rgb(10, 0, 0);
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.7);
+    width: fit-content;
+    font-family: 'Asap', sans-serif;
+    font-size: smaller;
+    text-decoration: antiquewhite;
+    text-transform: uppercase;
 }
 
 #inputContainer {
@@ -52,6 +69,17 @@ p {
 }
 
 #searchButton {
+    color: antiquewhite;
+    background-color: rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    font-family: 'Asap', sans-serif;
+    border: 1px solid rgb(10,0,0);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 10px;
+}
+
+#popPageButton {
     color: antiquewhite;
     background-color: rgba(0,0,0,0.7);
     text-transform: uppercase;

@@ -1,7 +1,6 @@
 
 /*const countryToSearch = 'Netherlands'*/
 
-
 const searchBar = document.getElementById("searchBar");
 searchBar.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
