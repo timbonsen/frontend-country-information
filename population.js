@@ -4,6 +4,9 @@ async function allCountryInfo() {
         const result = await axios.get(`https://restcountries.eu/rest/v2/all`);
         const allCountryInfo = result.data
         console.log(allCountryInfo)
+        for (let i = 0; i < allCountryInfo.length; i++) {
+            printItem(allCountryInfo[i])
+        }
     } catch(e) {
         console.error(e);
         const errorMessage = document.getElementById('errorMessage')
@@ -15,8 +18,17 @@ window.onload = (event) => {
     allCountryInfo();
 };
 
-function displayCountries(data) {
-    for (let i = 0; i < data.length; i++) {
-        const flagItem = document.createElement('li')
-    }
+function printItem(data) {
+    const itemContainer = document.createElement("div");
+    itemContainer.setAttribute("class", "itemContainer")
+    const countryFlag = document.createElement("img");
+    countryFlag.setAttribute("class", "countryFlag")
+    countryFlag.srcset = `${data.flag}`
+    const countryName = document.createElement("div");
+    countryName.setAttribute("class", "countryName");
+    countryName.textContent = `${data.name}`
+    itemContainer.appendChild(countryFlag)
+    itemContainer.appendChild(countryName)
+    const countryList = document.getElementById("infoContainer");
+    countryList.appendChild(itemContainer)
 }
