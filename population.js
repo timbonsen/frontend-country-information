@@ -4,6 +4,9 @@ async function allCountryInfo() {
         const result = await axios.get(`https://restcountries.eu/rest/v2/all`);
         const allCountryInfo = result.data
         console.log(allCountryInfo)
+        allCountryInfo.sort((a, b) => {
+            return a.population - b.population;
+        })
         for (let i = 0; i < allCountryInfo.length; i++) {
             printItem(allCountryInfo[i])
         }
